@@ -1,0 +1,179 @@
+header {
+    width:calc(1440px - 60px);
+    margin: 0 auto;
+}
+header .event {
+    width: 100%; height:100px;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    align-items: center;
+}
+header .event img {
+    margin-right: 20px;
+}
+header .event span {
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+header .event span:last-child {margin-left: 575px;}
+main {
+    width:calc(1440px - 60px);
+    margin: 0 auto;
+}
+
+main .sns {}
+main .sns #kakao {}
+main .sns #kakao img {}
+main .sns #naver {}
+main .sns #naver img {}
+
+main .sns_open {}
+main .sns_open #kakao_reser {}
+main .sns_open #kakao_reser img {}
+main .sns_open #naver_reser {}
+main .sns_open #naver_reser img {}
+
+
+main section {
+    
+    
+}
+main section .main_page {
+    background: url(../images/bg_01.png) no-repeat center;
+    height:830px;
+}
+main section .main_page h1 {
+    padding: 120px 0 0 120px;
+    margin-bottom: 11px;
+    
+}
+main section .main_page h1 a {}
+main section .main_page h1 a img {width: 287px; height:77px;}
+main section .main_page p {
+    font-size: 4.68rem;
+    font-weight: 600;
+    padding-left: 120px;
+    color: #000;
+    margin-bottom: 10px;
+}
+main section .main_page h2 {
+    font-size: 9.37rem;
+    padding-left: 120px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px gray;
+}
+main section .main_page em {
+    font-size: 3.12rem;
+    padding-left: 120px;
+    font-weight: 600;
+}
+main section .main_page .main_mid {
+    width: 1380px; height:100px;
+    margin-top: 120px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+main section .main_page .main_mid img {width: 100px; height:100px;}
+main section .main_page .main_mid span {
+    font-size: 1.95rem;
+    padding: 0px 20px 0 20px;
+}
+main section .main_btm {}
+main section .main_btm ul {}
+main section .main_btm ul li {}
+main section .main_btm ul li img {}
+main section .main_btm ul li .bentfit_txt {}
+main section .main_btm ul li .bentfit_txt span {}
+main section .main_btm ul li .bentfit_txt span .under {}
+
+main section .page02 {}
+main section .page02 p {}
+main section .page02 h3 {}
+main section .page02 #ads_slide {}
+main section .page02 #ads_slide .swiper-wrapper {}
+main section .page02 #ads_slide .swiper-wrapper .swiper-slide {}
+main section .page02 #ads_slide .swiper-wrapper .slide1 {}
+main section .page02 #ads_slide .swiper-wrapper .slide1 img {}
+main section .page02 #ads_slide .swiper-wrapper .slide2 {}
+main section .page02 #ads_slide .swiper-wrapper .slide2 img {}
+main section .page02 #ads_slide .swiper-wrapper .slide3 {}
+main section .page02 #ads_slide .swiper-wrapper .slide3 img {}
+main section .page02 #ads_slide .swiper-button-prev {}
+main section .page02 #ads_slide .swiper-button-next {}
+
+main section .page03 {}
+main section .page03 .page03_top {}
+main section .page03 .page03_top .p03_top_text {}
+main section .page03 .page03_top .p03_top_text h3 {}
+main section .page03 .page03_top .p03_top_text span {}
+main section .page03 .p03_btm {}
+main section .page03 .p03_btm p {}
+main section .page03 .p03_btm span {}
+main section .page03 .p03_btm img {}
+
+main section .page04 {}
+main section .page04 p {}
+main section .page04 span {}
+main section .page04 .before_test {}
+main section .page04 .before_test li {}
+main section .page04 .before_test li img {}
+main section .page04 .before_test li .bt_text {}
+main section .page04 .before_test li .bt_text em {}
+main section .page04 .before_test li .bt_text span {}
+
+main section .page05_top {}
+main section .page05_top span {}
+main section .page05_top h3 {}
+main section .page05_top .line {}
+main section .page05_top .p05_top_text {}
+main section .page05_top .p05_top_text p {}
+main section .page05_contents {}
+main section .page05_contents .contents {}
+main section .page05_contents .contents .contents_head {}
+main section .page05_contents .contents .contents_head span {}
+main section .page05_contents .contents .contents_head .eng_name {}
+main section .page05_contents .contents .contents_head .eng_name p {}
+main section .page05_contents .contents .contents_head .eng_name span {}
+main section .page05_contents .contents .contents_head a {}
+main section .page05_contents .contents .contents_head a em {}
+main section .page05_contents .contents .contents_body {}
+main section .page05_contents .contents .contents_body iframe {}
+main section .page05_contents .contents .contents_body .contents_desc {}
+main section .page05_contents .contents .contents_body .contents_desc span {}
+main section .page05_contents .contents .contents_body .contents_desc p {}
+
+main section .page06 {}
+main section .page06 .pg06_top {}
+main section .page06 .pg06_top p {}
+main section .page06 .pg06_top .title {}
+main section .page06 .pg06_top .title h3 {}
+main section .page06 .pg06_top .title span {}
+main section .page06 span {}
+main section .page06 .review1 {}
+main section .page06 .review1 p {}
+main section .page06 .review1 span {}
+main section .page06 .review2 {}
+main section .page06 .review2 p {}
+main section .page06 .review2 span {}
+main section .page06 p {}
+
+main section .page07 {}
+main section .page07 .pg07_contents {}
+main section .page07 .pg07_contents ul {}
+main section .page07 .pg07_contents ul li {}
+main section .page07 .pg07_contents ul li img {}
+main section .page07 .pg07_contents ul li img span {}
+main section .page07 .pg07_contents .call {}
+main section .page07 .pg07_contents .call span {}
+main section .page07 .pg07_contents .call span img {}
+main section .page07 .pg07_contents .call span em {}
+main section .page07 .pg07_contents .sns {}
+main section .page07 .pg07_contents .sns a {}
+main section .page07 .pg07_contents .sns a img {}
