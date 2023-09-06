@@ -1,40 +1,88 @@
+html, header, main {
+    min-width:1440px;
+    scroll-behavior: smooth;
+}
 header {
-    width:calc(1440px - 60px);
+    width:calc(100% - 60px);
     margin: 0 auto;
 }
 header .event {
     width: 100%; height:100px;
     display: flex;
     flex-flow: row nowrap;
-    
+    justify-content: space-between;
     align-items: center;
 }
-header .event img {  
-    margin-right: 20px;
+header .event .left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .event .left img {  
+    margin-right: 10px;
+}
+header .event .left span {
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    padding-right: 610px;
 }
 header .event span {
+    
     font-size: 1.875rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
-header .event span:last-child {margin-left: 575px;}
 main {
-    width:calc(1440px - 60px);
+    width:calc(100% - 60px);
     margin: 0 auto;
 }
 
-main .sns {}
-main .sns #kakao {}
+main > .sns {
+    position: absolute;
+    right:30px; bottom:230px;
+    position: fixed;
+    z-index: 999;
+    
+}
+main .sns #kakao {
+    
+}
 main .sns #kakao img {}
-main .sns #kakao_reser {}
+main .sns #kakao_reser {
+    
+}
+main .sns #kakao_reser .kakao_close {
+    padding-bottom: 90px;
+}
 main .sns #kakao_reser img {}
 
-main .sns_open {}
+main .sns_open {
+    position: absolute;
+    right:30px; bottom:120px;
+    position: fixed;
+    z-index: 999;
+}
 main .sns_open #naver {}
+
 main .sns_open #naver img {}
 main .sns_open #naver_reser {}
+main .sns_open #naver_reser .naver_close {
+    padding-bottom: 60px;
+}
 main .sns_open #naver_reser img {}
-
+main .sns_open #arrow {
+    position: absolute;
+    right:30px; bottom:10px;
+    position: fixed;
+    z-index: 999;
+    transition: all 0.2s linear;
+}
+main .sns_open #arrow:hover {
+    scale:1.05;
+}
+main .sns_open #arrow img {}
 
 main section {
     
@@ -57,6 +105,7 @@ main section .main_page p {
     padding-left: 120px;
     color: #000;
     margin-bottom: 10px;
+    letter-spacing: -0.02rem;
 }
 main section .main_page h2 {
     font-size: 9.37rem;
@@ -65,14 +114,17 @@ main section .main_page h2 {
     color: #fff;
     margin-bottom: 20px;
     text-shadow: 2px 2px 2px gray;
+    letter-spacing: -0.02rem;
 }
 main section .main_page em {
     font-size: 3.12rem;
     padding-left: 120px;
     font-weight: 600;
+    letter-spacing: -0.02rem;
 }
 main section .main_page .main_mid {
-    width: 1380px; height:100px;
+    width: 100%; height:100px;
+    margin: 0 auto;
     margin-top: 120px;
     display: flex; flex-flow: row nowrap;
     justify-content: flex-end;
@@ -85,7 +137,10 @@ main section .main_page .main_mid span {
     font-size: 1.95rem;
     padding: 0px 20px 0 20px;
 }
-main section .main_btm {overflow: hidden;}
+main section .main_btm {
+    overflow: hidden;
+    position: relative;
+}
 main section .main_btm ul {
     margin: 50px;
     
@@ -127,10 +182,12 @@ main section .main_btm ul li .benefit_txt .under {
 }
 
 main section .page02 {
+    width: 100%;
     height: 990px;
     margin: 0 auto;
     text-align: center;
     background: url(../images/bg_02.jpg) no-repeat center;
+    background-size: cover;
 }
 main section .page02 p {
     padding-top: 80px;
@@ -165,9 +222,11 @@ main section .page02 #ads_slide .swiper-button-next {
 }
 main section .page02 #ads_slide .swiper-button-prev:after,
 main section .page02 #ads_slide .swiper-button-next:after {display: none;}
-main section .page03 {}
+main section .page03 {
+    width: 100%;
+}
 main section .page03 .page03_top {
-    width: 1380px; height:574px;
+    width: 100%; height:574px;
     background: url(../images/bg_03.jpg) no-repeat center;
     background-size: cover;
     padding-top: 120px;
@@ -183,21 +242,21 @@ main section .page03 .page03_top .p03_top_text h3 {
     font-size: 4.68rem;
     font-weight: 700;
     color: #fff;
-    margin-left: 228px;
+    margin-left: 97px;
     text-shadow: 2px 2px 2px gray;
     margin-bottom: 10px;
 }
 main section .page03 .page03_top .p03_top_text span {
     display: block;
-    padding-left: 228px;
+    padding-left: 97px;
     font-size: 2.18rem;
     line-height: 50px;
     font-weight: 600;
     color: #000;
 }
 main section .page03 .p03_btm {
-    width: 1380px; height: 1510px;
-    background: url(../images/bg_04.jpg) no-repeat center;
+    width: 100%; height: 1510px;
+    padding-top: 50px;
 }
 main section .page03 .p03_btm p {
     font-size: 3.12rem;
@@ -207,23 +266,26 @@ main section .page03 .p03_btm p {
 }
 main section .page03 .p03_btm span {
     width: 80px;
-    margin: 0 0 14px 97px;
+    margin: 0 0 30px 97px;
     border: 1px solid#000;
     display: block;
 }
 main section .page03 .p03_btm img {
-    width: 1186px; height:1313px;
+    width: 1400px; height:1400px;
     margin: 0 auto;
     display: block;
     text-align: center;
 }
 
 main section .page04 {
-    margin-bottom: 116px;
+    margin-top: 150px;
+    padding-bottom: 50px;
+    background: url(../images/bg_02.jpg) no-repeat center;
+    background-size: cover;
 }
 main section .page04 p {
     font-size: 3.12rem;
-    padding: 48px 0 20px 97px;
+    padding: 100px 0 20px 97px;
     font-weight: 700;
     color: #204192;
 }
@@ -269,7 +331,7 @@ main section .page04 .before_test li .bt_text span {
 }
 
 main section .page05_top {
-    width: 1380px; height: 850px;
+    width: 100%; height: 850px;
     background: url(../images/bg_05.png) no-repeat center;
     background-size: cover;
     
@@ -293,7 +355,7 @@ main section .page05_top .line {
 
 }
 main section .page05_top .p05_top_text {
-    width: 1380px; height:371px;
+    width: 100%; height:371px;
     background-color: #fff;
     opacity: 0.8;
     margin-top: 125px;
@@ -305,8 +367,9 @@ main section .page05_top .p05_top_text p {
     letter-spacing: -0.02rem;
 }
 main section .page05_contents {
-    width: 1380px; height: 1500px;
+    width: 100%; height: 1500px;
     margin-bottom: 100px;
+    margin-top: 30px;
 }
 main section .page05_contents .contents {
     padding: 70px 97px 50px 95px;
@@ -317,6 +380,7 @@ main section .page05_contents .contents .contents_head {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s;
 }
 main section .page05_contents .contents .contents_head .head_left {
     display: flex;
@@ -345,6 +409,11 @@ main section .page05_contents .contents .contents_head a {
     text-align: center;
     border-radius: 5px;
     padding-top: 15px;
+    transition: all 1s;
+}
+main section .page05_contents .contents .contents_head a:hover {
+    background-color: #000;
+    transition: all 1s;
 }
 main section .page05_contents .contents .contents_head a em {
     font-size: 1.25rem; 
@@ -376,7 +445,7 @@ main section .page05_contents .contents .contents_body .contents_desc p {
 }
 
 main section .page06 {
-    width: 1380px; height:1187px;
+    width: 100%; height:1187px;
     background: url(../images/bg_06.jpg) no-repeat center;
 }
 main section .page06 .pg06_top {
@@ -409,7 +478,8 @@ main section .page06 .pg06_top .title span {
 }
 main section .page06 > span {
     font-size: 1.25rem;
-    margin: 72px 0 15px 47px;
+    margin: 72px 0 15px 300px;
+    font-weight: 600;
     padding-bottom: 15px;
     display: block;
 }
@@ -426,8 +496,18 @@ main section .page06 .review .review1 a {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-}
+    overflow: hidden;
+    transition: all 0.2s linear;
 
+}
+main section .page06 .review .review1 a:hover {
+    scale: 1.01;
+    
+
+}
+main section .page06 .review .review2 a:hover {
+    scale: 1.01;
+}
 main section .page06 .review .review1 a p {
     font-size: 3.12rem;
     font-weight: 700;
@@ -454,6 +534,7 @@ main section .page06 .review .review2 a {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
+    transition: all 0.2s linear;
 }
 main section .page06 .review .review2 a p {
     font-size: 3.12rem;
@@ -476,10 +557,11 @@ main section .page06 > p {
     margin-top: 66px;
     font-size: 1.25rem;
     letter-spacing: -0.02rem;
+    font-weight: 500;
 }
 
 main section .page07 {
-    width: 1380px; height: 1109px;
+    width: 100%; height: 1109px;
     
 }
 main section .page07 .pg07_contents {
@@ -513,7 +595,7 @@ main section .page07 .pg07_contents ul li span {
 }
 main section .page07 .pg07_contents ul li .limit {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 main section .page07 .pg07_contents .call {
     text-align: center;
@@ -551,8 +633,16 @@ main section .page07 .pg07_contents .call span em {
 main section .page07 .pg07_contents .sns {
     text-align: center;
     margin-top: 70px;
+    
 }
 main section .page07 .pg07_contents .sns a {
     margin-right: 10px;
+    
 }
-main section .page07 .pg07_contents .sns a img {}
+main section .page07 .pg07_contents .sns a:hover img {
+    scale: 1.02;
+    overflow: hidden;
+}
+main section .page07 .pg07_contents .sns a img {
+    transition: all 0.2s linear;
+}

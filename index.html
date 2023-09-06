@@ -14,13 +14,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- 파비콘 위치 -->
-    
+    <link rel="shortcut icon" href="./images/army.png" type="image/x-icon">
+    <link rel="icon" href="./images/army.png" type="image/x-icon">
 </head> 
 <body>
     <header>
         <div class="event">
-            <img src="./images/gift.png" alt="">
-            <span>개원 12 주년 기념 이벤트</span>
+            <div class="left">
+                <img src="./images/gift.png" alt="">
+                <span>개원 12 주년 기념 이벤트</span>
+            </div>
             <span>당일 수술 추가 혜택을 꼭 확인하세요!</span>
         </div>
     </header>
@@ -58,11 +61,16 @@
         </section>
         <div class="sns">
             <a href="#" id="kakao"><img src="./images/kakako.png" alt=""></a>
-            <a href="#" id="kakao_reser"><img src="./images/kakao_reservation.png" alt=""></a>
+            <a href="#" id="kakao_reser">
+                <img src="./images/nav_close.png" alt="" class="kakao_close">
+                <img src="./images/kakao_reservation.png" alt=""></a>
         </div>
         <div class="sns_open">
             <a href="#" id="naver"><img src="./images/naver1.png" alt=""></a>
-            <a href="#" id="naver_reser"><img src="./images/naver_reservation.png" alt=""></a>
+            <a href="#" id="naver_reser">
+                <img src="./images/nav_close.png" alt="" class="naver_close">
+                <img src="./images/naver_reservation.png" alt=""></a>
+            <a href="#" id="arrow"><img src="./images/arrow.png" alt=""></a>
         </div>
         <section>
             <div class="page02">  <!-- 배경이미지 삽입 -->
@@ -298,5 +306,58 @@
             </div>
         </section>
     </main>
+    <script>
+        const kakao = document.querySelector('#kakao')
+        const kakao_reser = document.querySelector('#kakao_reser')
+        const naver = document.querySelector('#naver')
+        const naver_reser = document.querySelector('#naver_reser')
+        const kakao_close = document.querySelector('.kakao_close')
+        const naver_close = document.querySelector('.naver_close')
+        const arrow = document.querySelector('#arrow')
+        console.log(kakao, kakao_reser, naver, naver_reser, kakao_close, naver_close)
+        kakao_reser.style.display = 'none'
+        naver_reser.style.display = 'none'
+        
+            kakao.addEventListener('click',function(e){
+                e.preventDefault();
+                kakao_reser.style.display = 'block'
+                kakao.style.display = 'none'
+            })
+            kakao_close.addEventListener('click',function(e){
+                e.preventDefault();
+                kakao.style.display = 'block'
+                kakao_reser.style.display = 'none'
+            })
+        
+            naver.addEventListener('click',function(e){
+                e.preventDefault();
+                naver_reser.style.display = 'block'
+                naver.style.display = 'none'
+            })
+            naver_close.addEventListener('click',function(e){
+                e.preventDefault();
+                naver.style.display = 'block'
+                naver_reser.style.display = 'none'
+            })
+            arrow.addEventListener('click',function(e){
+                e.preventDefault();
+                window.scrollTo(0,0);
+            })
+
+            // swiper-slide 영역
+const nav_adver = new Swiper('#ads_slide',{   // 화면에서 슬라이드가 당겨지는지 확인
+    autoplay:{
+        delay:3000,
+        disableOnInteraction:false, 
+    },   
+    loop:true,    
+    direction:'horizontal',
+    
+    navigation: { 
+        nextEl: '#ads_slide .swiper-button-next',    //네비게이션 버튼
+        prevEl: '#ads_slide .swiper-button-prev',
+    },
+});
+    </script>
 </body>
 </html>
